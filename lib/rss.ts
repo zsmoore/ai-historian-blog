@@ -1,9 +1,7 @@
 import RSS, { FeedOptions } from 'rss';
-import fs from 'fs';
 import { Post } from './notion';
-import path from 'path';
 
-export default async function generateRssFeed(baseUrl: string, posts: Post[]) {
+export default function generateRssFeed(baseUrl: string, posts: Post[]): RSS {
   const feedOptions: FeedOptions = {
     title: 'On This Day in History  RSS Feed',
     description: 'RSS Feed for All Day in History Posts',
@@ -20,7 +18,5 @@ export default async function generateRssFeed(baseUrl: string, posts: Post[]) {
       date: post.date
     })
   })
-
-  const fullPath = path.join(process.cwd(), 'public', 'rss.xml')
-  fs.writeFileSync(fullPath, feed.xml({indent: true}));
+  return feed;
 }
