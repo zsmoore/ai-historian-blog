@@ -22,9 +22,5 @@ export default async function generateRssFeed(baseUrl: string, posts: Post[]) {
   })
 
   const fullPath = path.join(process.cwd(), 'public', 'rss.xml')
-  if (fs.existsSync(fullPath)) {
-    await fs.promises.unlink(fullPath);
-  }
-
   fs.writeFileSync(fullPath, feed.xml({indent: true}));
 }
