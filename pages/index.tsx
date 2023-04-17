@@ -48,7 +48,7 @@ export default function Home(props: HomeProps) {
 
 export const getStaticProps = async () => {
   const data: Post[] = await getAll();
-  generateRssFeed(process.env.HOST!!, data);
+  await generateRssFeed(process.env.HOST!!, data);
   return {
     props: {
       posts: data,
