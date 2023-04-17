@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { Post, getAll } from '../lib/notion'
 import styles from '@component/styles/Home.module.css'
 import { Inter } from 'next/font/google'
+import generateRssFeed from '@component/lib/rss';
 
 const inter = Inter({subsets: ['latin']});
 
@@ -47,6 +48,7 @@ export default function Home(props: HomeProps) {
 
 export const getStaticProps = async () => {
   const data: Post[] = await getAll();
+  generateRssFeed(process.env.HOST!!, data);
   return {
     props: {
       posts: data,

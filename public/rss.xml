@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title><![CDATA[On This Day in History  RSS Feed]]></title>
+        <description><![CDATA[RSS Feed for All Day in History Posts]]></description>
+        <link>localhost:3000</link>
+        <generator>RSS for Node</generator>
+        <lastBuildDate>Mon, 17 Apr 2023 14:34:29 GMT</lastBuildDate>
+        <atom:link href="localhost:3000/rss.xml" rel="self" type="application/rss+xml"/>
+        <item>
+            <title><![CDATA[The Discoveries and Achievements of the Apollo 13 Spaceflight Mission on April 17, 1970]]></title>
+            <description><![CDATA[On this day in history]]></description>
+            <link>localhost:3000/apollo-13-spaceflight-mission-april-17-1970</link>
+            <guid isPermaLink="true">localhost:3000/apollo-13-spaceflight-mission-april-17-1970</guid>
+            <pubDate>Mon, 17 Apr 2023 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Remembering the Battle of Damascus on April 17th]]></title>
+            <description><![CDATA[On this day in history]]></description>
+            <link>localhost:3000/battle-of-damascus-april-17</link>
+            <guid isPermaLink="true">localhost:3000/battle-of-damascus-april-17</guid>
+            <pubDate>Mon, 17 Apr 2023 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[The 1907 Ellis Island Immigration Center opens on April 17th]]></title>
+            <description><![CDATA[On this day in history]]></description>
+            <link>localhost:3000/ellis-island-immigration-center-opens-april-17</link>
+            <guid isPermaLink="true">localhost:3000/ellis-island-immigration-center-opens-april-17</guid>
+            <pubDate>Mon, 17 Apr 2023 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[A Massive Earthquake Struck California on April 17th, 1906]]></title>
+            <description><![CDATA[On this day in history]]></description>
+            <link>localhost:3000/california-earthquake-1906-april-17</link>
+            <guid isPermaLink="true">localhost:3000/california-earthquake-1906-april-17</guid>
+            <pubDate>Mon, 17 Apr 2023 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[The Historic Battle of Lexington and Concord on April 17, 1775]]></title>
+            <description><![CDATA[On this day in history]]></description>
+            <link>localhost:3000/historic-battle-lexington-concord-april-17-1775</link>
+            <guid isPermaLink="true">localhost:3000/historic-battle-lexington-concord-april-17-1775</guid>
+            <pubDate>Mon, 17 Apr 2023 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Remembering the Historic Event that Occurred on April 17 in the Past]]></title>
+            <description><![CDATA[On this day in history]]></description>
+            <link>localhost:3000/historic-event-april-17</link>
+            <guid isPermaLink="true">localhost:3000/historic-event-april-17</guid>
+            <pubDate>Mon, 17 Apr 2023 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Remembering the Midland hotel fire of April 17, 1980]]></title>
+            <description><![CDATA[On this day in history]]></description>
+            <link>localhost:3000/midland-hotel-fire-april-17-1980</link>
+            <guid isPermaLink="true">localhost:3000/midland-hotel-fire-april-17-1980</guid>
+            <pubDate>Mon, 17 Apr 2023 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[The sinking of Titanic: A Tragic Event In History That Shook The World]]></title>
+            <description><![CDATA[On this day in history]]></description>
+            <link>localhost:3000/sinking-of-titanic-april-16-1912</link>
+            <guid isPermaLink="true">localhost:3000/sinking-of-titanic-april-16-1912</guid>
+            <pubDate>Sun, 16 Apr 2023 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Remembering the Tragic Events of the Virginia Tech Massacre on April 16th]]></title>
+            <description><![CDATA[On this day in history]]></description>
+            <link>localhost:3000/virginia-tech-massacre-april-16-remembrance</link>
+            <guid isPermaLink="true">localhost:3000/virginia-tech-massacre-april-16-remembrance</guid>
+            <pubDate>Sun, 16 Apr 2023 00:00:00 GMT</pubDate>
+        </item>
+    </channel>
+</rss>
