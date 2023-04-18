@@ -1,10 +1,11 @@
 import { getAll, getSinglePost, PageResult, Post } from "@component/lib/notion";
 import ReactMarkdown from 'react-markdown';
-import styles from '@component/styles/Home.module.css'
-import { Inter } from 'next/font/google'
+import { Inter, Share } from 'next/font/google'
+import { Tags } from "@component/components/tags";
+import Footer from "@component/components/footer";
+import { ShareBar } from "@component/components/share";
 
-
-const inter = Inter({subsets: ['latin']});
+const inter = Inter({ subsets: ['latin'] });
 
 interface PostResultProps {
   pageResult: PageResult,
@@ -12,22 +13,22 @@ interface PostResultProps {
 
 export default function PostResult(props: PostResultProps) {
   return (
-    <div className={styles.container}>
-      <main className={inter.className}>
-        <div className={styles.container}>
-          <section>
-            <span>{props.pageResult.post.date}</span>
-            <p style={{color: "gray"}}>{props.pageResult.post.tags.join(', ')}</p>
-          </section>
-          <br/>
-          <section className={styles.component}>
+    <div className="w-screen bg-white dark:bg-black">
+      <div className="justify-center items-center">
+        <div className="container mx-auto px-8 max-w-3xl justify-center items-center">
+          <div className="prose dark:prose-invert lg:prose-lg mx-auto my-8">
+            <div className="py-4">
+              <Tags tags={props.pageResult.post.tags} />
+            </div>
             <ReactMarkdown>{props.pageResult.markdown}</ReactMarkdown>
-          </section>
+          </div>
+          <ShareBar slug={props.pageResult.post.slug} />
         </div>
-      </main>
+      </div>
+      <Footer />
     </div>
-  )
-};
+  );
+}
 
 export interface PropArgs {
   params: any
@@ -45,7 +46,7 @@ export const getStaticProps = async (args: PropArgs) => {
 
 export const getStaticPaths = async () => {
   const posts = await getAll();
-  const paths = posts.map((post: Post) => ({ params: { slug: post.slug }}));
+  const paths = posts.map((post: Post) => ({ params: { slug: post.slug } }));
 
   return {
     paths,
