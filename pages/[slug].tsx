@@ -3,7 +3,6 @@ import ReactMarkdown from 'react-markdown';
 import { Tags } from "@component/components/tags";
 import Footer from "@component/components/footer";
 import { ShareBar } from "@component/components/share";
-import { Main } from "next/document";
 import Head from "next/head";
 
 interface PostResultProps {
