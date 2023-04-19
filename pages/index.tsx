@@ -1,46 +1,55 @@
 import Head from 'next/head'
 import Link from 'next/link';
 import { Post, getAll } from '../lib/notion'
-import styles from '@component/styles/Home.module.css'
 import { Inter } from 'next/font/google'
+import PostCard from '@component/components/postcard';
+import Footer from '@component/components/footer';
 
-const inter = Inter({subsets: ['latin']});
+const inter = Inter({ subsets: ['latin'] });
 
 interface HomeProps {
   posts: Post[]
 }
 
 export default function Home(props: HomeProps) {
-  if(!props.posts) {
+  if (!props.posts) {
     return <h1>No posts</h1>
   }
 
   return (
-    <div className={styles.container}>
+    <div className='w-screen bg:white dark:bg-black'>
       <Head>
         <title>On This Day in History</title>
         <meta name="description" content='An AI powered history blog' />
-        <link rel='icon' href='/favicon.ico'/>
+        <link rel='icon' href='/favicon.ico' />
       </Head>
-      <main className={inter.className}>
-        <h1>On This Day In History</h1>
-        {props.posts.map((post: Post, index: number) => {
-          return (
-            <section key={index} className={styles.card}>
-              <div>
-                <h2>
-                  <Link href={post.slug}>
-                    {post.title}
-                  </Link>
-                </h2>
+      <div className='flex justify-center items-center'>
+        <div className='container mx-4 sm:mx-8 max-w-3xl'>
+          <section>
+            <div className="px-4 py-32 lg:flex lg:items-center">
+              <div className="mx-auto max-w-xl text-center">
+                <h1 className="bg-gradient-to-r from-green-400 via-blue-500 to-purple-600 bg-clip-text font-extrabold text-transparent text-4xl sm:text-5xl leading-tight sm:leading-tight lg:leading-relaxed">
+                  On This Day in History
+                </h1>
+                <p className="mt-4 sm:text-xl/relaxed text-slate-400">
+                  An AI powered history blog
+                </p>
               </div>
-              <div>{post.date}</div>
-              <p>{post.description}</p>
-            </section>
-          );
-          })
-        }
-      </main>
+            </div>
+          </section>
+
+          {props.posts.map((post: Post, index: number) => {
+            return (
+              <section key={index}>
+                <Link href={post.slug}>
+                  <PostCard post={post} />
+                </Link>
+              </section>
+            );
+          })}
+        </div>
+      </div>
+      <Footer />
     </div>
   );
 }
