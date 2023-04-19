@@ -5,8 +5,8 @@ export default function generateRssFeed(baseUrl: string, posts: Post[]): RSS {
   const feedOptions: FeedOptions = {
     title: 'On This Day in History  RSS Feed',
     description: 'RSS Feed for All Day in History Posts',
-    site_url: baseUrl,
-    feed_url: `${baseUrl}/rss.xml`
+    site_url: `https://${baseUrl}`,
+    feed_url: `https://${baseUrl}/rss.xml`
   };
 
   const feed = new RSS(feedOptions);
@@ -14,7 +14,7 @@ export default function generateRssFeed(baseUrl: string, posts: Post[]): RSS {
     feed.item({
       title: post.title,
       description: post.description,
-      url: `${baseUrl}/${post.slug}`,
+      url: `https://${baseUrl}/${post.slug}`,
       date: post.date
     })
   })
