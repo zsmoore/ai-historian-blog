@@ -17,7 +17,7 @@ export default function Home(props: HomeProps) {
   }
 
   return (
-    <div className='w-screen bg:white dark:bg-black'>
+    <div className='bg:white dark:bg-black'>
       <Head>
         <title>On This Day in History</title>
         <meta name="description" content='An AI powered history blog' />

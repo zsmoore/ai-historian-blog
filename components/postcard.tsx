@@ -8,7 +8,7 @@ interface PostCardProps {
 const PostCard = (props: PostCardProps) => {
   return (
     <div
-      className="rounded-xl border border-gray-200 dark:border-gray-700 p-4 shadow-sm transition hover:shadow-xl sm:p-6 my-8"
+      className="rounded-xl border border-gray-200 dark:border-gray-700 p-4 shadow-sm transition hover:shadow-xl dark:hover:shadow-blue-900 dark:hover:shadow-lg sm:p-6 my-8"
     >
       <div className="rounded-[10px] p-4 sm:p-6">
         <time className="block text-xs text-gray-500">
