@@ -13,7 +13,7 @@ interface PostResultProps {
 
 export default function PostResult(props: PostResultProps) {
   return (
-    <div className="w-screen bg-white dark:bg-black">
+    <div className="bg-white dark:bg-black">
       <Head>
         <title>{props.pageResult.post.title}</title>
         <meta name="keywords" content={props.pageResult.post.tags.join(', ')}/>

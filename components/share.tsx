@@ -6,8 +6,8 @@ const ShareBar = (props: ShareBarProps) => {
   return (
     <div className="max-w-full flex flex-row justify-end my-8">
       <a
-        className="inline-flex items-center gap-2 rounded-full border border-sky-600 px-8 py-3 text-sky-600 hover:bg-sky-600 hover:text-white focus:outline-none focus:ring active:bg-sky-600 transition hover:shadow-xl hover:scale-110"
-        href={'https://www.linkedin.com/sharing/share-offsite/?url=' + encodeURIComponent('https://ai-historian-blog.vercel.app/' + props.slug)}
+        className="inline-flex items-center gap-2 rounded-full border border-sky-600 px-8 py-3 text-sky-600 hover:bg-sky-600 hover:text-white focus:outline-none focus:ring active:bg-sky-600 transition hover:shadow-xl dark:hover:shadow-sky-900 dark:hover:shadow-lg hover:scale-110"
+        href={'https://www.linkedin.com/sharing/share-offsite/?url=' + encodeURIComponent('https://ai-historian-blog.com/' + props.slug)}
         target="_blank"
         rel="noreferrer"
       >
