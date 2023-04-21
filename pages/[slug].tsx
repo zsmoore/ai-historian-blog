@@ -1,5 +1,4 @@
 import { getAll, getSinglePost, PageResult, Post } from "@component/lib/notion";
-import Image from 'next/image';
 import ReactMarkdown from 'react-markdown';
 import { Tags } from "@component/components/tags";
 import Footer from "@component/components/footer";

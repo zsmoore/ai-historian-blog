@@ -7,9 +7,9 @@ const Footer = () => {
         <div className="sm:flex sm:items-center sm:justify-between">
           <div className="flex justify-center sm:justify-start">
             <Link href="/">
-              <h1 className="bg-gradient-to-r from-green-400 via-blue-500 to-purple-600 bg-clip-text font-extrabold text-transparent text-md sm:text-lg leading-tight sm:leading-tight lg:leading-relaxed">
+              <span className="bg-gradient-to-r from-green-400 via-blue-500 to-purple-600 bg-clip-text font-extrabold text-transparent text-md sm:text-lg leading-tight sm:leading-tight lg:leading-relaxed">
                 On This Day in History
-              </h1>
+              </span>
             </Link>
           </div>
 
