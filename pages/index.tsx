@@ -20,7 +20,7 @@ export default function Home(props: HomeProps) {
     <div className='bg:white dark:bg-black'>
       <Head>
         <title>{process.env.NEXT_PUBLIC_WEBSITE_TITLE?.replaceAll(/"/g, '')}</title>
-        <meta name="description" content='An AI powered history blog' />
+        <meta name="description" content={process.env.NEXT_PUBLIC_WEBSITE_SUBTITLE?.replaceAll(/"/g, '' )} />
         <link rel='icon' href='/favicon.ico' />
       </Head>
       <div className='flex justify-center items-center'>
@@ -32,7 +32,7 @@ export default function Home(props: HomeProps) {
                   {process.env.NEXT_PUBLIC_WEBSITE_TITLE?.replaceAll(/"/g, '')}
                 </h1>
                 <p className="mt-4 sm:text-xl/relaxed text-slate-400">
-                  An AI powered history blog
+                  {process.env.NEXT_PUBLIC_WEBSITE_SUBTITLE?.replaceAll(/"/g, '' )}
                 </p>
               </div>
             </div>
