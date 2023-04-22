@@ -16,12 +16,12 @@ export default function PostResult(props: PostResultProps) {
       <Head>
         <title>{props.pageResult.post.title}</title>
         <meta name="keywords" content={props.pageResult.post.tags.join(', ')}/>
-        <meta name="description" content={`On This Day in History: ${props.pageResult.post.title}`}/>
+        <meta name="description" content={`${process.env.NEXT_PUBLIC_WEBSITE_TITLE?.replace(/"/, '')}: ${props.pageResult.post.title}`}/>
       </Head>
       <nav className="bg-white border-gray-200 dark:bg-gray-900 dark:border-gray-700">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-center mx-auto p-4">
           <Link href="/" className="flex-items-center">
-            <span className="bg-gradient-to-r from-green-400 via-blue-500 to-purple-600 bg-clip-text font-extrabold text-transparent text-md sm:text-lg leading-tight sm:leading-tight lg:leading-relaxed">On This Day in History</span>
+            <span className="bg-gradient-to-r from-green-400 via-blue-500 to-purple-600 bg-clip-text font-extrabold text-transparent text-md sm:text-lg leading-tight sm:leading-tight lg:leading-relaxed">{process.env.NEXT_PUBLIC_WEBSITE_TITLE?.replace(/"/, '')}</span>
           </Link>
         </div>
       </nav>

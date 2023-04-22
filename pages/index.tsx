@@ -19,7 +19,7 @@ export default function Home(props: HomeProps) {
   return (
     <div className='bg:white dark:bg-black'>
       <Head>
-        <title>On This Day in History</title>
+        <title>{process.env.NEXT_PUBLIC_WEBSITE_TITLE?.replace(/"/, '')}</title>
         <meta name="description" content='An AI powered history blog' />
         <link rel='icon' href='/favicon.ico' />
       </Head>
@@ -29,7 +29,7 @@ export default function Home(props: HomeProps) {
             <div className="px-4 py-32 lg:flex lg:items-center">
               <div className="mx-auto max-w-xl text-center">
                 <h1 className="bg-gradient-to-r from-green-400 via-blue-500 to-purple-600 bg-clip-text font-extrabold text-transparent text-4xl sm:text-5xl leading-tight sm:leading-tight lg:leading-relaxed">
-                  On This Day in History
+                  {process.env.NEXT_PUBLIC_WEBSITE_TITLE?.replace(/"/, '')}
                 </h1>
                 <p className="mt-4 sm:text-xl/relaxed text-slate-400">
                   An AI powered history blog

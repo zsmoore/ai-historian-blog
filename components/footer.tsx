@@ -8,7 +8,7 @@ const Footer = () => {
           <div className="flex justify-center sm:justify-start">
             <Link href="/">
               <span className="bg-gradient-to-r from-green-400 via-blue-500 to-purple-600 bg-clip-text font-extrabold text-transparent text-md sm:text-lg leading-tight sm:leading-tight lg:leading-relaxed">
-                On This Day in History
+                {process.env.NEXT_PUBLIC_WEBSITE_TITLE?.replace(/"/, '')}
               </span>
             </Link>
           </div>
