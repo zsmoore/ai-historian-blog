@@ -17,7 +17,7 @@ export const generateSiteMap = (posts: Post[], host: string): string  => {
           `
           <news:news>
             <news:publication>
-              <news:name>${process.env.NEXT_PUBLIC_WEBSITE_TITLE?.replaceAll(/"/, '')}</news:name>
+              <news:name>${process.env.NEXT_PUBLIC_WEBSITE_TITLE?.replaceAll(/"/g, '')}</news:name>
               <news:language>en</news:language>
             </news:publication>
             <news:publication_date>${post.date}</news:publication_date>
