@@ -4,7 +4,7 @@ import { Post } from './notion';
 export default function generateRssFeed(baseUrl: string, posts: Post[]): RSS {
   const feedOptions: FeedOptions = {
     title: `${process.env.NEXT_PUBLIC_WEBSITE_TITLE?.replaceAll(/"/g, '')} RSS Feed`,
-    description: 'RSS Feed for All Day in History Posts',
+    description: `RSS Feed for All '${process.env.NEXT_PUBLIC_WEBSITE_TITLE?.replaceAll(/"/g, '')}' Posts`,
     site_url: `https://${baseUrl}`,
     feed_url: `https://${baseUrl}/rss.xml`
   };
