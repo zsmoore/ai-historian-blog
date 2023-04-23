@@ -5,6 +5,7 @@ import Footer from "@component/components/footer";
 import { ShareBar } from "@component/components/share";
 import Head from "next/head";
 import Link from "next/link";
+import Script from "next/script";
 
 interface PostResultProps {
   pageResult: PageResult,
@@ -13,6 +14,23 @@ interface PostResultProps {
 export default function PostResult(props: PostResultProps) {
   return (
     <div className="bg-white dark:bg-black">
+      <Script
+        src='https://news.google.com/swg/js/v1/swg-basic.js'
+        async={true}
+        type='application/javascript'/>
+      <Script id='google-news'>
+        {`(self.SWG_BASIC = self.SWG_BASIC || []).push( basicSubscriptions => {
+            basicSubscriptions.init({
+              type: "NewsArticle",
+              isAccessibleForFree: true,
+              isPartOfType: ["Product"],
+              isPartOfProductId: "CAow7pLOCw:openaccess",
+              autoPromptType: "contribution_large",
+              clientOptions: { theme: "light", lang: "en" },
+            });
+          });`
+        }
+      </Script>
       <Head>
         <title>{props.pageResult.post.title}</title>
         <meta name="keywords" content={props.pageResult.post.tags.join(', ')}/>
