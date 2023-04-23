@@ -4,13 +4,13 @@ import { GetServerSideProps, GetServerSidePropsContext } from "next";
 import RSS from "rss";
 
 export default function RSSPage() {
-
+ // intentionally empty
 }
 
 
 export const getServerSideProps: GetServerSideProps = async (context: GetServerSidePropsContext) => {
   const data: Post[] = await getAll();
-  const rss: RSS = generateRssFeed(context.req.headers.host!!, data);
+  const rss: RSS = generateRssFeed(context.req.headers.host!, data);
   context.res.setHeader('Content-type', 'text/xml');
   context.res.setHeader(
     'Cache-Control',
