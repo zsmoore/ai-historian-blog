@@ -11,10 +11,10 @@ const Article = (props: ArticleProps) => {
       <Script type="application/ld+json" id="article-markup">
         {`
         {
-          "@context": "https://schema.org,
+          "@context": "https://schema.org",
           "@type": "NewsArticle",
           "headline": "${props.post.title}",
-          ${props.post.cover ? `"image": ["${props.post.cover}],` : ""}
+          ${props.post.cover ? `"image": ["${props.post.cover}"],` : ""}
           "datePublished": "${props.post.date}",
           "dateModified": "${props.post.date}",
           "author": [{
