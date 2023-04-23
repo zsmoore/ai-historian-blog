@@ -13,7 +13,8 @@ export interface Post {
   tags: string[],
   description: string,
   date: string,
-  slug: string
+  slug: string,
+  cover: string | null
 }
 
 const getPageMetaData = (post: any): Post => {
@@ -32,6 +33,7 @@ const getPageMetaData = (post: any): Post => {
     description: post.properties.Description.rich_text[0].plain_text,
     date: post.properties.Date.date.start,
     slug: post.properties.Slug.rich_text[0].plain_text,
+    cover: post.properties.Cover.files?.[0]?.external?.url ?? null
   }
 }
 
