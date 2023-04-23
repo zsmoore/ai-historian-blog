@@ -6,6 +6,7 @@ import { ShareBar } from "@component/components/share";
 import Head from "next/head";
 import Link from "next/link";
 import News from "@component/components/news";
+import Article from "@component/components/article";
 
 interface PostResultProps {
   pageResult: PageResult,
@@ -15,6 +16,7 @@ export default function PostResult(props: PostResultProps) {
   return (
     <div className="bg-white dark:bg-black">
       <News/>
+      <Article post={props.pageResult.post}/>
       <Head>
         <title>{props.pageResult.post.title}</title>
         <meta name="keywords" content={props.pageResult.post.tags.join(', ')}/>
