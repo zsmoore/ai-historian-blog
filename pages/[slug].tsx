@@ -19,6 +19,13 @@ export default function PostResult(props: PostResultProps) {
         <title>{props.pageResult.post.title}</title>
         <meta name="keywords" content={props.pageResult.post.tags.join(', ')}/>
         <meta name="description" content={`${process.env.NEXT_PUBLIC_WEBSITE_TITLE?.replaceAll(/"/g, '')}: ${props.pageResult.post.title}`}/>
+        <meta name="og:title" content={props.pageResult.post.title} />
+        { props.pageResult.post.cover 
+          ? (<meta name="og:image" content={props.pageResult.post.cover} />) 
+          : <></>
+        }
+        <meta name="og:type" content="article" />
+        <meta name="og:tags" content={props.pageResult.post.tags.join(', ')}/>
       </Head>
       <nav className="bg-white border-gray-200 dark:bg-gray-900 dark:border-gray-700">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-center mx-auto p-4">
