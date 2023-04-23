@@ -21,7 +21,12 @@ export default function PostResult(props: PostResultProps) {
         <meta name="description" content={`${process.env.NEXT_PUBLIC_WEBSITE_TITLE?.replaceAll(/"/g, '')}: ${props.pageResult.post.title}`}/>
         <meta name="og:title" content={props.pageResult.post.title} />
         { props.pageResult.post.cover 
-          ? (<meta name="og:image" content={props.pageResult.post.cover} />) 
+          ? (
+          <>
+          <meta name="og:image" content={props.pageResult.post.cover} />
+          <meta name="image" content={props.pageResult.post.cover} />
+          </>
+          ) 
           : <></>
         }
         <meta name="og:type" content="article" />
