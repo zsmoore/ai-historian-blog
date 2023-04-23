@@ -1,11 +1,9 @@
 import Head from 'next/head'
 import Link from 'next/link';
 import { Post, getAll } from '../lib/notion'
-import { Inter } from 'next/font/google'
 import PostCard from '@component/components/postcard';
 import Footer from '@component/components/footer';
-
-const inter = Inter({ subsets: ['latin'] });
+import News from '@component/components/news';
 
 interface HomeProps {
   posts: Post[]
@@ -18,6 +16,7 @@ export default function Home(props: HomeProps) {
 
   return (
     <div className='bg:white dark:bg-black'>
+      <News/>
       <Head>
         <title>{process.env.NEXT_PUBLIC_WEBSITE_TITLE?.replaceAll(/"/g, '')}</title>
         <meta name="description" content={process.env.NEXT_PUBLIC_WEBSITE_SUBTITLE?.replaceAll(/"/g, '' )} />

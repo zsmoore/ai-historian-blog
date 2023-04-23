@@ -14,7 +14,7 @@ export interface Post {
   description: string,
   date: string,
   slug: string
-};
+}
 
 const getPageMetaData = (post: any): Post => {
   const getTags = (tags: any): string[] => {
@@ -37,7 +37,7 @@ const getPageMetaData = (post: any): Post => {
 
 export const getAll = async (): Promise<Post[]> => {
   const posts = await notion.databases.query({
-    database_id: process.env.DATABASE_ID!!,
+    database_id: process.env.DATABASE_ID!,
     filter: {
       property: "Published",
       checkbox: {
@@ -66,7 +66,7 @@ export interface PageResult{
 
 export const getSinglePost = async(slug: string): Promise<PageResult> => {
   const response = await notion.databases.query({
-    database_id: process.env.DATABASE_ID!!,
+    database_id: process.env.DATABASE_ID!,
     filter: {
       property: "Slug",
       formula: {
