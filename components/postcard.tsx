@@ -24,7 +24,7 @@ const PostCard = (props: PostCardProps) => {
           {props.post.description}
         </p>
 
-        <div className="-mt-5 collapse sm:visible sm:mt-4">
+        <div className="-mt-5 hidden sm:visible sm:mt-4">
           <Tags tags={props.post.tags} />
         </div>
 
