@@ -6,7 +6,10 @@ export default function generateRssFeed(baseUrl: string, posts: Post[]): RSS {
     title: `${process.env.NEXT_PUBLIC_WEBSITE_TITLE?.replaceAll(/"/g, '')} RSS Feed`,
     description: `RSS Feed for All '${process.env.NEXT_PUBLIC_WEBSITE_TITLE?.replaceAll(/"/g, '')}' Posts`,
     site_url: `https://${baseUrl}`,
-    feed_url: `https://${baseUrl}/rss.xml`
+    feed_url: `https://${baseUrl}/rss.xml`,
+    custom_namespaces: {
+      'media': 'http://search.yahoo.com/mrss/'
+    }
   };
 
   const feed = new RSS(feedOptions);
@@ -15,7 +18,18 @@ export default function generateRssFeed(baseUrl: string, posts: Post[]): RSS {
       title: post.title,
       description: post.description,
       url: `https://${baseUrl}/${post.slug}`,
-      date: post.date
+      date: post.date,
+      custom_elements: [
+        {
+          'media:content' : {
+            _attr : {
+              url: post.cover,
+              medium: 'image',
+              type: 'image/jpeg',
+            }
+          }
+        },
+      ],
     })
   })
   return feed;
